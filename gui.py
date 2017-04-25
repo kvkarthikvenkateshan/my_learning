@@ -1,0 +1,17 @@
+from tkinter import *
+def disp():
+    val = var.get()
+    #lab = Label(obj, text = val)
+    stri.set(val)
+    lab = Label(obj, textvariable = stri)
+    lab.place(x=100, y=100)
+obj = Tk()
+obj.geometry('400x400')
+obj.title('First App')
+var = StringVar()
+stri = StringVar()
+ent = Entry(obj,textvariable = var)
+ent.place(x = 60, y =50)
+Button= Button(obj,text = 'disp', bg = 'black', fg = 'white', bd = '10', command = disp )
+Button.place(x =10, y = 10)
+obj.mainloop()
